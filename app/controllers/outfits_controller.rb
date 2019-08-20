@@ -17,9 +17,12 @@ end
 
 def edit
     @outfit = Outfit.find(params[:id])
+    @items = Item.all
 end
 
 def update
+    @outfit = Outfit.find(params[:id])
+    byebug
 end
 
 end
