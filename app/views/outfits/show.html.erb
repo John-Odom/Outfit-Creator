@@ -1,5 +1,7 @@
 <h1><%=@outfit.name%></h1>
 
+<%=link_to "Add Items to Outfit", edit_outfit_path%>
+
 <div class='all_items'>
     <%@outfit.items.each do |i|%>
         <div class="item_div">

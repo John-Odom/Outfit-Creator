@@ -1,0 +1,14 @@
+<h2>Edit Your Outfit</h2>
+<h3> Outfit Name:   <%=@outfit.name.capitalize%> </h3>
+
+<ul>
+<%@outfit.items.each do |item|%>
+    <li><%=item.name%></li>
+<%end%>
+</ul>
+
+<%form_for @outfit do |f|%>
+<%# <%byebug%> %>
+    <%=f.number_field :item_id%>
+    <%=f.submit%>
+<%end%>
