@@ -22,14 +22,39 @@
  }
  
  img {
-     height: 25rem;
-     width: 20rem; 
+    height: 20rem;
+    width: 18rem;
+   object-fit: contain;  
  }
 
  h1{
-     font-size: 4rem; 
- }
+    font-size: 4rem; 
+}
 
  div.nonheading{
     margin-left: 10rem; 
  }
+
+ div.all_items{
+     display: flex; 
+     flex-direction: column; 
+ }
+
+ div.item_div{
+     display: flex; 
+     flex-direction: row; 
+ }
+
+
+ /* div.ui_secondary_menu{
+     display: flex;
+     flex-direction: row; 
+     align-content: flex-start; 
+ }
+
+ div.right_menu {
+     border-style: solid; 
+     display: flex;
+     align-items: flex-end; 
+     justify-content: right; 
+ } */

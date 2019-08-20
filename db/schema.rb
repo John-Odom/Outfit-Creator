@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_203701) do
+ActiveRecord::Schema.define(version: 2019_08_20_183148) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_203701) do
     t.integer "style_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
     t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["style_id"], name: "index_items_on_style_id"
   end
@@ -60,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_203701) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
   end
 
 end

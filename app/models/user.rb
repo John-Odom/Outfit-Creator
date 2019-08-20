@@ -1,7 +1,8 @@
 class User < ApplicationRecord
     has_many :outfits
     has_many :outfit_items, through: :outfits
-
+    has_secure_password
+    
     def to_s
         self.first_name + ' ' + self.last_name 
     end

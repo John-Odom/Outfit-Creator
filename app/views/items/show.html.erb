@@ -1,5 +1,9 @@
-<h1><%=@item.name%></h1>
+<h2><%=@item.name%></h2>
 <h3><%=@item.brand%></h3>
+
+<%= image_tag(@item.img_url, :alt => "landing pic") %>
+
+
 
 <p>Item Style: <%=@item.style.name%></p>
 <p>Item Category: <%=@item.category.name%></p>
@@ -9,7 +13,7 @@
 <p>Users with this item in their outfits:</p>
 <ul>
 <%@item.outfits.each do |o|%>
-    <li><%=o.user.name%></li>
+    <li><%=o.user.to_s%></li>
 <%end%>
 </ul>
 

@@ -1,0 +1,19 @@
+<h1><%=@outfit.name%></h1>
+
+<div class='all_items'>
+    <%@outfit.items.each do |i|%>
+        <div class="item_div">
+            <div class="image">
+                <%= image_tag(i.img_url, :alt => "Item Picture") %>
+            </div>
+            <div class="info">
+                <ul>
+                    <li>Name: <%=i.name%></li>
+                    <li>Brand: <%=i.brand%></li>
+                    <li>Category: <%=i.category.name%></li>
+                    <li>Style: <%=i.style.name%></li>
+                </ul>
+            </div>
+        </div>
+    <%end%>
+</div>

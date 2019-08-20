@@ -1,0 +1,8 @@
+<h2> Create an Outfit </h2>
+
+<%=form_for @outfit do |f|%>
+<%byebug%>
+    <%=f.collection_select :outfit_item, :item_id, @items.find_by(category:"tops"), :id, :name%>
+
+
+<%end%>

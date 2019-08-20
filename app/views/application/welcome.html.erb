@@ -9,7 +9,7 @@
     <h3>Please login or create an account</h3>
 </div>
 <div class='buttons'>
-    <div class='login_button'><%=button_to 'Login', '/login'%></div>
-    <div class='login_button'><%=button_to 'New Account', '/new_account', method: :get%></div>
+    <div class='login_button'><%=button_to 'Login', '/login', method: :get%></div>
+    <div class='login_button'><%=button_to 'New Account', new_user_path, method: :get%></div>
 </div>
 </div>
