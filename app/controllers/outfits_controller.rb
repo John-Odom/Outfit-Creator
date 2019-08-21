@@ -22,7 +22,9 @@ end
 
 def update
     @outfit = Outfit.find(params[:id])
-    byebug
+    @item = Item.find(params[:outfit][:id])
+    @outfit.items << @item
+    redirect_to outfit_path(@outfit)
 end
 
 end

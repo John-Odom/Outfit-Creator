@@ -9,8 +9,7 @@
 
 <h2>Add Item to Outfit</h2>
 
-<ul>
-<%@items.each do |item|%>
-    <li> <%=link_to item.name, edit_outfit_path%> </li>
+<%=form_for @outfit do |f|%>
+<%=f.collection_select(:id, @items, :id, :name)%>
+<%=f.submit%>
 <%end%>
-</ul>
