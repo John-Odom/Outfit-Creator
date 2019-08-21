@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(user_params)
-
+        session[:user_id] = @user.id
         flash[:notice] = "Welcome #{@user.first_name}! Your account was created successfully!"
         redirect_to user_path(@user)
     end

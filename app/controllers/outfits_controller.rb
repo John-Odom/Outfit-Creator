@@ -11,7 +11,9 @@ def new
 end
 
 def create
-    @outfit = Outfit.create(params.require(:outfit).permit(:name))
+    @outfit = Outfit.new(params.require(:outfit).permit(:name))
+    @outfit.user_id = session[:user_id]
+    @outfit.save
     redirect_to outfit_path(@outfit)
 end
 
@@ -25,6 +27,12 @@ def update
     @item = Item.find(params[:outfit][:id])
     @outfit.items << @item
     redirect_to outfit_path(@outfit)
+end
+
+def destroy
+    @outfit = Outfit.find(params[:id])
+    @outfit.destroy
+    redirect_to outfits_path
 end
 
 end
