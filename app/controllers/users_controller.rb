@@ -25,6 +25,8 @@ class UsersController < ApplicationController
     end
 
     def destroy
+        # byebug
+        session.delete(:user_id)
         @user.destroy
         redirect_to welcome_path 
     end
@@ -36,6 +38,6 @@ class UsersController < ApplicationController
     end
 
     def set_user
-        @user = User.find(params[:id])
+        @user = User.find(session[:user_id])
     end
 end

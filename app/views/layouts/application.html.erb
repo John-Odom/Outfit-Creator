@@ -12,29 +12,55 @@
    
   </head>
 
-  <body>
-      <div class="ui content main">
-      <div class="ui_secondary_menu">
-        <%= link_to("Outfits", outfits_path, class: "item") %>
-        <%= link_to("Items", items_path, class: "item") %>
-        <div class="right_menu">
-          
-          <% if current_user %>
-            <%= link_to("Logout", login_path, method: :delete, class: "item") %>
-          <% else %>
-            <%= link_to("Login", login_path, class: "item") %>
-          <% end %>
-          </div>
+  <div class="nav">
+
+    <div class="first_40">
+      <div class="home_link">
+        <%= link_to("Home", welcome_path, class: "item") %>
       </div>
-      <% if flash[:notice] %>
-        <div class="ui info message">
-          <div class="header">
-            Notice
-          </div>
-          <p><%= flash[:notice] %></p>
-        </div>
-      <% end %>
-      <%= yield %>
+
+
+      
+      <div class="outfits_link">
+        <%= link_to("Outfits", outfits_path, class: "item") %>
+      </div>
+
+      <div class="items_link">
+        <%= link_to("Items", items_path, class: "item") %>
+      </div>
+
     </div>
+
+    <div class="second_40">
+        <% if flash[:notice] %>
+        <div class="notice_div">
+          <b><em><%= flash[:notice] %></em></b>
+        </div>
+        <% end %>
+    </div>
+
+    <div class="last_20">
+
+      <div class="profile_link">
+        <%if current_user%>
+        <%= link_to("Profile", user_path(User.find(session[:user_id])), class: "item") %>
+        <%end%>
+      </div>
+      
+      <div class = "login_link">
+        <% if current_user %>
+          <%= link_to("Logout", login_path, method: :delete, class: "item") %>
+        <% else %>
+          <%= link_to("Login", login_path, class: "item") %>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+  <body>
+   
+   
+      <%= yield %>
   </body>
 </html>

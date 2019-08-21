@@ -1,10 +1,22 @@
-<p>Please enter your username and password</p>
-<%=form_tag do %>
-    <%=label_tag 'Username: '%><br>
-    <%=text_field_tag :username%><br>
-    <%=label_tag 'Password: '%><br>
-    <%=password_field_tag :password%><br><br>
-    <%=submit_tag 'Login'%><br><br>
-<%end%>
-<%=link_to 'Create Account', new_account_path%><br>
-<%=link_to 'Homepage', welcome_path%>
+<div class="auth">
+
+    <div class="login_text">
+    <p>Please enter your username and password</p>
+    </div>
+
+    <div class="login_form">
+    <%=form_tag do %>
+        <%=label_tag 'Username: '%><br>
+        <%=text_field_tag :username%><br>
+        <%=label_tag 'Password: '%><br>
+        <%=password_field_tag :password%><br><br>
+        <%=submit_tag 'Login'%><br><br>
+    <%end%>
+    </div>
+
+    <div class="auth_links">
+    <%=link_to 'Create Account', new_account_path%><br>
+    <%=link_to 'Homepage', welcome_path%>
+    </div>
+
+</div>
