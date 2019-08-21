@@ -11,13 +11,9 @@
 <br>
 
 <p>Users with this item in their outfits:</p>
-<%array = []%>
-<%@item.outfits.each do |o|%>
-    <% array << o.user.to_s%>
-<%end%>
-<ul>
 
-<%array.uniq.each do |user|%>
+<ul>
+<%uniq_users.each do |user|%>
     <li> <%=user%> </li>
 <%end%>
 </ul>
