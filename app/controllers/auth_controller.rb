@@ -1,5 +1,7 @@
 class AuthController < ApplicationController
-    def new
+  before_action :logged_in?, only: :new 
+  
+  def new
     end
 
     def create

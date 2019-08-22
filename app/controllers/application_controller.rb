@@ -9,10 +9,18 @@ class ApplicationController < ActionController::Base
     def authorize!
         unless current_user
             flash[:notice] = "You must be logged in to do that."
-            redirect_to welcome_path
+            redirect_to login_path
         end 
     end
-    
+
+    def logged_in?
+        if current_user
+            flash[:notice] = "You are already logged in."
+            @user = User.find(session[:user_id])
+            redirect_to user_path(@user)
+        end 
+    end
+
     def welcome
     end
 
