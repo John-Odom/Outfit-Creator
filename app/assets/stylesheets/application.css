@@ -76,8 +76,30 @@
     opacity: 0.1; 
 }
 
+.new_account{
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1511389290465-d11bafd4c1df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3; 
+}
+
+.new_account_text{
+    z-index: 2;
+    margin-left: 3%;
+    margin-top: 3%; 
+}
+
 .item_text{
     z-index: 2;
+}
+
+.user_text{
+    margin-left: 3%;
+    margin-top: 3%; 
 }
 
 .outfits{
@@ -89,6 +111,47 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.3;
+}
+
+.create_outfit {
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1298&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.outfit_show{
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1532646195885-5c09e5c45934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1444&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;  
+}
+
+.outfit_show_text{
+    margin-left: 3%;
+    margin-top: 3%; 
+    z-index: 2;
+}
+
+.create_outfit_text{
+    margin-left: 3%;
+    margin-top: 3%; 
+    z-index: 2;
+}
+
+.create_outfit_text button {
+    font-size: 1.5rem; 
+    color: white; 
+    background-color: black; 
+    margin-left: 5rem; 
 }
 
 .outfit_text{
@@ -108,47 +171,18 @@
     margin-top: 6%; 
 }
 
-.row {
-    position: absolute; 
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0 4px;
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-  }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
-
 .buttonTo{
     font-size: 1.5rem; 
     color: white; 
     background-color: black; 
     margin-left: 5rem;  
+    box-shadow: 1px 2px 4px gray; 
+    border-radius: 0.5rem; 
+}
+
+.buttonTo:hover {
+    font-size: 1.4rem; 
+    cursor: pointer;
 }
 /* 
  .ui_content_main{
@@ -171,7 +205,16 @@
      height: 1.5rem; 
      z-index: 3;
      background-color: darkgray; 
+     padding: 1%; 
+ }
 
+ .nav a {
+     text-decoration: none; 
+     color: black; 
+ }
+
+ .nav a:hover{
+     color: darkred; 
  }
 
  .first_40{
@@ -216,6 +259,13 @@
  .auth{
      display: flex; 
      flex-direction: column; 
+     margin-left: 5%;
+     margin-top: 5%; 
+ }
+
+ .logged_in{
+     margin-top: 5%;
+     margin-left: 5%; 
  }
 
 

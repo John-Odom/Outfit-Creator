@@ -25,6 +25,7 @@ class ApplicationController < ActionController::Base
     end
 
     def home
+        current_user
     end
 
     private

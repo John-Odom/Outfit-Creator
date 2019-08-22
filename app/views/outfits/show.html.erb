@@ -1,28 +1,34 @@
-<h1><%=@outfit.name%></h1>
+<div class="outfit_show">
+    <p></p>
+</div>
 
-<%=link_to "Add Items to Outfit", edit_outfit_path%>
-<br><br>
+<div class="outfit_show_text">
+    <h1><%=@outfit.name%></h1>
 
-<%if session[:user_id] == @outfit.user_id%>
-    <%=button_to "Delete Your Outfit", outfit_path(@outfit), method: :delete%><br>
-<%end%>
+    <%=link_to "Add Items to Outfit", edit_outfit_path%>
+    <br><br>
 
-<div class='all_items'>
-    <%@outfit.items.each do |i|%>
-        <div class="item_div">
-            <div class="image">
-                <%= image_tag(i.img_url, :alt => "Item Picture") %>
-            </div>
-            <div class="info">
-                <ul>
-                    <li>Name: <%=i.name%></li>
-                    <li>Brand: <%=i.brand%></li>
-                    <li>Category: <%=i.category.name%></li>
-                    <li>Style: <%=i.style.name%></li><br>
-                    <%form_tag outfit_path method: %>
-                </ul>
-            </div>
-        </div>
+    <%if session[:user_id] == @outfit.user_id%>
+        <%=button_to "Delete Your Outfit", outfit_path(@outfit), method: :delete%><br>
     <%end%>
+
+    <div class='all_items'>
+        <%@outfit.items.each do |i|%>
+            <div class="item_div">
+                <div class="image">
+                    <%= image_tag(i.img_url, :alt => "Item Picture") %>
+                </div>
+                <div class="info">
+                    <ul>
+                        <li>Name: <%=i.name%></li>
+                        <li>Brand: <%=i.brand%></li>
+                        <li>Category: <%=i.category.name%></li>
+                        <li>Style: <%=i.style.name%></li><br>
+                        <%form_tag outfit_path method: %>
+                    </ul>
+                </div>
+            </div>
+        <%end%>
+    </div>
 </div>
 
