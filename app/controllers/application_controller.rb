@@ -36,6 +36,9 @@ class ApplicationController < ActionController::Base
         current_user
     end
 
+    def analytics
+    end
+
     private
 
     def user_params

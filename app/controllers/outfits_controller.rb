@@ -14,8 +14,11 @@ end
 def create
     @outfit = Outfit.new(params.require(:outfit).permit(:name))
     @outfit.user_id = session[:user_id]
-    @outfit.save
-    redirect_to outfit_path(@outfit)
+    if @outfit.save
+        redirect_to outfit_path(@outfit)
+    else
+        render new_outfit_path
+    end
 end
 
 def edit

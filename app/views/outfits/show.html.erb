@@ -1,3 +1,5 @@
+
+
 <div class="outfit_show">
     <p></p>
 </div>
@@ -12,6 +14,7 @@
             <%=link_to "Add Items to Outfit", edit_outfit_path%>
             <br>
             <%=button_to "Delete Your Outfit", outfit_path(@outfit), method: :delete%><br>
+           
         <%end%>
     </div>
 
@@ -39,7 +42,10 @@
                 </div>
             <%end%>
         </div>
+         
     </div>
+    <br>
+    <%=link_to "View All Outfits", outfits_path%>
 <%# </div> %>
 
 

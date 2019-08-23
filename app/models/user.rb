@@ -6,4 +6,14 @@ class User < ApplicationRecord
     def to_s
         self.first_name + ' ' + self.last_name 
     end
+
+    def formalize
+        "Mr. #{self.to_s}"
+    end
+
+    def self.most_outfits
+        max_num = self.all.map{|u| u.outfits.count}.max
+        self.all.find{|u| u.outfits.count == max_num}.formalize
+    end
+
 end
